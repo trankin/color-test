@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <title>JS Bin</title>
+    <link rel="stylesheet" href="css/site.css">
+</head>
+<body>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/vue/2.0.3/vue.js"></script>
+<div id="app">
+    <div id="bg" v-bind:style="filter"></div>
+    <div id="wrapper">
+        <h3>Hue</h3>
+        <input type="range" min="0" max="360" step="1" v-model="hue">
+        <span v-text="hue"></span>
+
+        <h3>Saturation</h3>
+        <input type="range" min="0" max="3" step=".1" v-model="saturation">
+        <span v-text="saturation"></span>
+
+        <h3>Contrast</h3>
+        <input type="range" min="0" max="3" step=".1" v-model="contrast">
+        <span v-text="contrast"></span>
+
+        <h3>Blur</h3>
+        <input type="range" min="0" max="200" step=".1" v-model="blur">
+        <span v-text="blur"></span>
+
+        <h3>Sepia</h3>
+        <input type="range" min="0" max="100" step="1" v-model="sepia">
+        <span v-text="sepia"></span>
+    </div>
+</div>
+
+<script src="js/site.js"></script>
+</body>
+</html>
